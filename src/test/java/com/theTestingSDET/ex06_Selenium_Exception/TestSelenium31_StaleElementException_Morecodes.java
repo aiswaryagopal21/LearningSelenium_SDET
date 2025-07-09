@@ -26,6 +26,7 @@ public class TestSelenium31_StaleElementException_Morecodes {
             driver.get("https://www.google.com/");
             WebElement search = driver.findElement(By.id("APjFqb"));
             driver.navigate().refresh();
+            //search = driver.findElement(By.id("APjFqb"));
             search.sendKeys("selenium"+ Keys.ENTER);
         } catch (StaleElementReferenceException e) {
             System.out.println(e.getMessage());
